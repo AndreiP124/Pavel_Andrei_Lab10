@@ -20,6 +20,7 @@ namespace Pavel_Andrei_Lab10
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            var shop1 = (ShopList)BindingContext;
             listView.ItemsSource = await App.Database.GetShopListsAsync();
         }
         async void OnShopListAddedClicked(object sender, EventArgs e)
@@ -40,5 +41,6 @@ namespace Pavel_Andrei_Lab10
                 });
             }
         }
+       
     }
 }
